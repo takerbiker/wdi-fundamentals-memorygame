@@ -1,9 +1,26 @@
-//four variables, queen or king
-var cardOne = "queen";
-var cardTwo = "queen";
-var cardThree = "king";
-var cardFour = "king";
+//array to store four cards
+const cards = ["queen","queen","king","king"];
+cardsInPlay = [];
 
-//User flipped over two cards
-console.log("User flipped " + cardOne);
-console.log("User flipped " + cardTwo);
+var cardOne = cards[0];
+cardsInPlay.push(cardOne);
+console.log("User flipped queen");
+
+var cardTwo = cards[2];
+cardsInPlay.push(cardTwo);
+console.log("User flipped queen");
+
+if (cardsInPlay.length === 2) {
+  if (cardsInPlay[0] === cardsInPlay[1]) {
+    alert('You have found a match!');
+  } else if (cardsInPlay[0] != cardsInPlay[1]) {
+    alert('Sorry, try again');
+  }
+}
+
+
+
+
+function flipCard(cardId) {
+
+}
